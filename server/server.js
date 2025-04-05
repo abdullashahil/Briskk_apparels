@@ -1,8 +1,6 @@
-const express = require("express")
-const path = require("path")
-
-// Server middlewares are added here.
+const express = require('express');
+const path = require('path');
 
 export function addMiddlewares(app) {
-    app.use("/favicon.ico", express.static(path.join(__dirname, "../public/favicon.ico")))
+  app.use('/images', express.static(path.join(__dirname, '../src/static/images')));
 }

@@ -1,0 +1,270 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    padding: 1.5rem 1.5rem;
+    transition: all 0.3s ease;
+    background-color: transparent;
+  
+    &Scrolled {
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .navbarContainer {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+  
+  .navbarContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logoLink {
+    text-decoration: none;
+  }
+  
+  .logo {
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  
+    &Home {
+      color: white;
+    }
+  
+    &Default {
+      color: black;
+      text-shadow: 2px 2px 0 #e5e7eb;
+    }
+  
+    &Scrolled {
+      color: black;
+      text-shadow: 2px 2px 0 #e5e7eb;
+    }
+  }
+  
+  .desktopNav {
+    display: none;
+  
+    @media (min-width: 768px) {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+  
+  .navItem {
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  
+    &:hover {
+      opacity: 0.85;
+    }
+  
+    &Home {
+      color: white;
+    }
+  
+    &Default {
+      color: #333;
+    }
+  
+    &Scrolled {
+      color: #333;
+    }
+  }
+  
+  .actionIcons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .iconButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    position: relative;
+    padding: 0;
+  
+    &:hover {
+      opacity: 0.85;
+    }
+  
+    &Home {
+      color: white;
+    }
+  
+    &Default {
+      color: #333;
+    }
+  
+    &Scrolled {
+      color: #333;
+    }
+  }
+  
+  .icon {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+  
+  .cartBadge {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    background-color: #5c564a;
+    color: white;
+    font-size: 0.75rem;
+    border-radius: 50%;
+    height: 1.25rem;
+    width: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.75);
+  }
+  
+  .mobileMenuButton {
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+  
+    @media (min-width: 768px) {
+      display: none;
+    }
+  
+    &Home {
+      color: white;
+    }
+  
+    &Default {
+      color: #333;
+    }
+  
+    &Scrolled {
+      color: #333;
+    }
+  }
+  
+  .mobileMenuOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+  }
+  
+  .mobileMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 85%;
+    max-width: 350px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .mobileMenuHeader {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .mobileMenuTitle {
+    font-weight: bold;
+    font-size: 1.125rem;
+  }
+  
+  .mobileMenuClose {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0 0.5rem;
+  }
+  
+  .mobileMenuContent {
+    padding: 1rem;
+    flex: 1;
+  }
+  
+  .mobileNavItems {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .mobileNavItem {
+    font-size: 1.125rem;
+    color: black;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: #f3f4f6;
+    }
+  }
+  
+  .mobileMenuDivider {
+    height: 1px;
+    background-color: #e5e7eb;
+    margin: 1rem 0;
+  }
+  
+  .mobileActionItems {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .mobileActionItem {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    color: black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      background-color: #f3f4f6;
+    }
+  }
+  
+  .mobileActionIcon {
+    height: 1.25rem;
+    width: 1.25rem;
+    margin-right: 0.75rem;
+  }
+  
+  .mobileMenuFooter {
+    padding: 1rem;
+    border-top: 1px solid #e5e7eb;
+    margin-top: auto;
+  }
+  
+  .footerText {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
